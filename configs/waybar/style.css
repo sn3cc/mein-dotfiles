@@ -1,0 +1,114 @@
+/* GENERAL */
+* {
+    font-family: "Jetbrains Mono NerdFont";
+    font-size: 14px;
+    min-height: 0;
+}
+
+/* MAIN BAR */
+#waybar {
+    background: #014d4e;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+#custom-cava {
+    color: #0d1b2a;
+    background: #014d4e;
+    padding-right: 8px;
+}
+
+
+/* MODULES SECTIONS */
+.modules-left {
+    background-color: #0d1b2a;
+}
+
+.modules-right {
+    background-color: #0d1b2a;
+    color: #14b8a6
+}
+
+/* UNIVERSAL MODULE STYLING */
+#clock,
+#network,
+#pulseaudio,
+#cpu,
+#temperature,
+#memory,
+#battery,
+#custom-weather,
+#custom-gamma-temp,
+#custom-keyboard {
+    background: #0d1b2a;
+    margin-right: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 0px;
+}
+
+/* WORKSPACES */
+#workspaces button {
+    background: #0d1b2a;
+    color: #24a7a7;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 0px;
+}
+
+#workspaces button:hover {
+    background-color: #0a4f4f;
+}
+
+#workspaces button.active {
+    color: #0d1b2a;
+    background: #14b8a6;
+}
+
+/* WINDOW TITLE */
+#window {
+    background: #014d4e;
+    color: #0d1b2a;
+}
+
+/* TRAY */
+#tray {
+    background: #0d1b2a;
+    padding-left: 4px;
+}
+
+/* MODULES WITH SPECIAL PADDING */
+#custom-keybindhint {
+    background: #0d1b2a;
+    margin-right: 4px;
+    padding-left: 6px;
+    padding-right: 8px;
+    border-radius: 0px;
+    font-size: 16px;
+}
+
+#custom-day-night {
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+/* POWER MENU - special styling */
+#custom-powermenu {
+    background: #f43f5e;
+    color: #000000;
+}
+
+/* SEPARATORS - keeping original styles as requested */
+#custom-separator {
+    color: #0d1b2a;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+#custom-separator2 {
+    background: #014d4e;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 4px;
+}
