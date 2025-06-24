@@ -1,64 +1,73 @@
-/* GENERAL */
+@import url("./colors.css");
+
 * {
-    font-family: "Jetbrains Mono NerdFont";
-    font-size: 14px;
+    border: none;
+    border-radius: 1px;
+    font-family: JetBrainsMono Nerd Font, Font Awesome;
+    font-size: 13px;
     min-height: 0;
 }
 
-/* MAIN BAR */
-#waybar {
-    background: #014d4e;
-    color: #fff;
-    padding: 0;
-    margin: 0;
+window#waybar {
+    background-color: @mantle;
+    color: @text;
 }
 
-#custom-cava {
-    color: #0d1b2a;
-    background: #014d4e;
-    padding-right: 8px;
+window#waybar.hidden {
+    opacity: 0.2;
 }
 
-
-/* MODULES SECTIONS */
-.modules-left {
-    background-color: #0d1b2a;
+tooltip {
+    background-color: @base;
+    border: 1px solid @surface1;
 }
 
-.modules-right {
-    background-color: #0d1b2a;
-    color: #14b8a6
+tooltip label {
+    color: @text;
 }
 
-/* UNIVERSAL MODULE STYLING */
-#clock,
-#network,
-#pulseaudio,
-#cpu,
-#temperature,
-#memory,
-#battery,
-#custom-weather,
-#custom-gamma-temp,
-#custom-keyboard {
-    background: #0d1b2a;
-    margin-right: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 0px;
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 1;
 }
 
-/* WORKSPACES */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px @text;
+}
+
 #workspaces button {
     background: #0d1b2a;
+    /* Changed from original */
     color: #24a7a7;
+    /* Changed from original */
     padding-left: 4px;
+    /* Changed from original */
     padding-right: 4px;
+    /* Changed from original */
     border-radius: 0px;
+    /* Changed from original */
 }
 
 #workspaces button:hover {
     background-color: #0a4f4f;
+    /* Changed from original */
+    box-shadow: inherit;
+    /* Kept from original, might be overridden by new background-color */
+    text-shadow: inherit;
+}
+
+#workspaces button.focused {
+    background: #14b8a6;
+    /* Changed from original */
+    color: #0d1b2a;
+    /* Changed from original */
+    box-shadow: inset 0 -3px @text;
+}
+
+#workspaces button.urgent {
+    background-image: linear-gradient(0deg, @red, @mantle);
 }
 
 #workspaces button.active {
@@ -66,49 +75,170 @@
     background: #14b8a6;
 }
 
-/* WINDOW TITLE */
-#window {
-    background: #014d4e;
-    color: #0d1b2a;
+#taskbar button.active {
+    background-image: linear-gradient(0deg, @surface1, @mantle);
 }
 
-/* TRAY */
+#mode {
+    background-color: @base;
+    box-shadow: inset 0 -2px @text;
+}
+
+#mpris,
+#custom-weather,
+#clock,
+#language,
+#pulseaudio,
+#bluetooth,
+#network,
+#memory,
+#cpu,
+#temperature,
+#disk,
+#custom-kernel,
+#idle_inhibitor,
+#scratchpad,
+#mode,
 #tray {
-    background: #0d1b2a;
-    padding-left: 4px;
-}
-
-/* MODULES WITH SPECIAL PADDING */
-#custom-keybindhint {
-    background: #0d1b2a;
-    margin-right: 4px;
-    padding-left: 6px;
-    padding-right: 8px;
-    border-radius: 0px;
-    font-size: 16px;
-}
-
-#custom-day-night {
     padding: 0 10px;
-    font-size: 16px;
+    margin: 5px 1px;
+    color: @text;
 }
 
-/* POWER MENU - special styling */
-#custom-powermenu {
-    background: #f43f5e;
-    color: #000000;
+#window,
+#workspaces {
+    margin: 0 4px;
 }
 
-/* SEPARATORS - keeping original styles as requested */
-#custom-separator {
-    color: #0d1b2a;
-    margin-right: 4px;
-    margin-left: 4px;
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
 }
 
-#custom-separator2 {
-    background: #014d4e;
-    margin-right: 0px;
-    margin-left: 0px;
-    font-size: 4px;
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+.modules-left {
+    background-color: #0d1b2a;
+    /* Changed from original */
+}
+
+#custom-weather {
+    background-color: @teal;
+    color: @mantle;
+    margin-right: 5px;
+}
+
+#custom-kernel {
+    background-color: @rosewater;
+    color: @mantle;
+}
+
+#clock {
+    background-color: @green;
+    color: @mantle;
+}
+
+@keyframes blink {
+    to {
+        background-color: @mantle;
+        color: @text;
+    }
+}
+
+label:focus {
+    background-color: @mantle;
+}
+
+#cpu {
+    background-color: @mauve;
+    color: @mantle;
+    min-width: 45px;
+}
+
+#memory {
+    background-color: @red;
+    color: @mantle;
+}
+
+#disk {
+    background-color: @flamingo;
+    color: @mantle;
+}
+
+#network {
+    background-color: @peach;
+    color: @mantle;
+}
+
+#network.disconnected {
+    background-color: red;
+    color: @mantle;
+}
+
+#bluetooth {
+    background-color: @maroon;
+    color: @mantle;
+    min-width: 40px;
+}
+
+#pulseaudio {
+    background-color: @yellow;
+    color: @mantle;
+}
+
+#pulseaudio.muted {
+    background-color: red;
+    color: @mantle;
+}
+
+#temperature {
+    background-color: @pink;
+    color: @mantle;
+    min-width: 37px;
+}
+
+#temperature.critical {
+    background-color: red;
+    color: @mantle;
+    min-width: 37px;
+}
+
+#mpris {
+    background-color: @base;
+    color: @text;
+}
+
+#tray {
+    background-color: @overlay0;
+    color: @text;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @mantle;
+}
+
+#idle_inhibitor {
+    background-color: @base;
+    color: @text;
+    font-family: Inter;
+}
+
+#idle_inhibitor.activated {
+    background-color: @text;
+    color: @base;
+}
+
+#scratchpad {
+    background-color: @base;
+    color: @text;
+}
+
+#scratchpad.empty {
+    background-color: transparent;
 }

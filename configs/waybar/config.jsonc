@@ -12,7 +12,6 @@
       "modules-center": [
       ],
       "modules-right": [
-        "custom/cava",
         "tray",
         "memory",
         "cpu",
@@ -60,7 +59,7 @@
       },
       "custom/cava": {
         "format": "{}",
-        "exec": "cava_visualizer.sh",
+        "exec": "/home/sn3cc/.config/waybar/scripts/cava-visualizer.sh",
         "restart-interval": 1,
         "hide-empty": true
       },
@@ -152,11 +151,9 @@
         "escape": true
       },
       "custom/keyboard": {
-         "exec": "~/.config/waybar/scripts/keyboard-layout.sh get",
+          "exec": "~/.config/waybar/scripts/keyboard-display.sh",
           "interval": 1,
-           "format": "{}",
-           "on-click": "~/.config/waybar/scripts/keyboard-layout.sh toggle",
-           "tooltip-format": "Current: {}\nClick to switch"
+          "format": "{}"
       }
     },
     { 
