@@ -86,6 +86,7 @@ button:hover {
 
 #mpris,
 #custom-weather,
+#custom-gpu,
 #clock,
 #language,
 #pulseaudio,
@@ -241,4 +242,9 @@ label:focus {
 
 #scratchpad.empty {
     background-color: transparent;
+}
+
+#custom-gpu {
+    background-color: @yellow;
+    color: @base;
 }
