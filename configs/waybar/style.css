@@ -38,7 +38,7 @@ button:hover {
 }
 
 #workspaces button {
-    background: #0d1b2a;
+    background: @base;
     /* Changed from original */
     color: #24a7a7;
     /* Changed from original */
@@ -120,8 +120,7 @@ button:hover {
 }
 
 .modules-left {
-    background-color: #0d1b2a;
-    /* Changed from original */
+    background-color: @base;
 }
 
 #custom-weather {
