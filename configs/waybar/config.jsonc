@@ -1,5 +1,6 @@
 [
-  {
+  { 
+    "include": "~/.config/waybar/modules",
     "layer": "top",
     "position": "top",
     "margin-bottom": 0,
@@ -12,6 +13,7 @@
     "modules-center": [
     ],
     "modules-right": [
+      "custom/cava",
       "tray",
       "memory",
       "cpu",
@@ -25,13 +27,8 @@
       "icon-size": 16,
       "spacing": 8
     },
-    "clock": {
-      "format": "{:%a, %d %B - %H:%M:%S}",
-      "interval": 1,
-      "tooltip": false
-    },
     "hyprland/workspaces": {
-      "format": "{icon}",
+      "format": "[{icon}]",
       "separate-outputs": false,
       "active-only": false,
       "all-outputs": false,
@@ -49,17 +46,17 @@
       "format": "  [ ]= "
     },
     "memory": {
-      "format": "  {used:0.1f}GB",
+      "format": "{used:0.1f}GB [RAM]",
       "tooltip": false,
       "interval": 10
     },
     "cpu": {
-      "format": "󰍛 {usage}%",
+      "format": "{usage}% [CPU]",
       "tooltip": false
     },
     "custom/cava": {
       "format": "{}",
-      "exec": "/home/sn3cc/.config/waybar/scripts/cava-visualizer.sh",
+      "exec": "/home/sn3cc/.config/waybar/scripts/cava.sh",
       "restart-interval": 1,
       "hide-empty": true
     },
@@ -151,10 +148,11 @@
       "escape": true
     },
     "custom/keyboard": {
-        "exec": "~/.config/waybar/scripts/keyboard-display.sh",
-        "interval": 1,
-        "format": "{}"
-    }
+      "exec": "~/.config/waybar/scripts/keyboard_layout.sh",
+      "interval": 1,
+      "format": "{}",
+      "tooltip": false
+  }
   },
   {
     "layer": "top",
@@ -173,7 +171,7 @@
       "clock"
     ],
     "hyprland/workspaces": {
-      "format": "{icon}",
+      "format": "[{icon}]",
       "separate-outputs": false,
       "active-only": false,
       "all-outputs": false,
@@ -185,11 +183,11 @@
       }
     },
     "cpu": {
-      "format": "󰍛 {usage}%",
+      "format": "{usage}% [CPU]",
       "tooltip": false
     },
     "memory": {
-      "format": "  {used:0.1f}GB",
+      "format": "{used:0.1f}GB [RAM]",
       "tooltip": false,
       "interval": 10
     },
@@ -204,7 +202,7 @@
     "custom/gpu": {
       "exec": "radeontop -d - -l 1 | grep -oP 'gpu \\K[0-9]+'",
       "interval": 3,
-      "format": "󰘚 {}%",
+      "format": "{}% [GPU]",
       "return-type": "plain",
       "tooltip": false
     }

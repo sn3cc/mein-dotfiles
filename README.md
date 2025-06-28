@@ -25,3 +25,6 @@ While this guide is created with [Arch Linux](https://archlinux.org/) in mind, i
    ```
    sudo sh install.sh
    ```
+
+## My Wallpaper Rotation 🖼️
+[Cattpuccin-Mocha Style](https://github.com/orangci/walls-catppuccin-mocha)
