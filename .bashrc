@@ -4,4 +4,4 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 
 # Add key if not already loaded
-ssh-add -l &>/dev/null || ssh-add ~/.ssh/id_rsa
+ssh-add -l &>/dev/null || ssh-add ~/.ssh/id_ed25519
