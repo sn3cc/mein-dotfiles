@@ -156,11 +156,14 @@
   },
   {
     "layer": "top",
+    "include": "~/.config/waybar/modules",
     "position": "top",
     "margin-bottom": 0,
     "output": "DP-2",
     "modules-left": [
-      "hyprland/workspaces"
+      "hyprland/workspaces",
+      "custom/open-window",
+      "hyprland/window"
     ],
     "modules-center": [],
     "modules-right": [
