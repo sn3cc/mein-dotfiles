@@ -19,9 +19,7 @@
       "cpu",
       "pulseaudio",
       "network",
-      "clock",
-      "custom/keyboard",
-      "custom/powermenu"
+      "clock"
     ],
     "tray": {
       "icon-size": 16,
@@ -39,8 +37,8 @@
         "16": "6", "17": "7", "18": "8", "19": "9", "110": "10"
       }
     },
-    "hyprland/window": {
-      "format": " {} "
+    "sway/language": {
+      "format": "[L]{short}"
     },
     "custom/open-window": {
       "format": "  [ ]= "
@@ -149,9 +147,9 @@
     },
     "custom/keyboard": {
       "exec": "~/.config/waybar/scripts/keyboard_layout.sh",
-      "interval": 1,
       "format": "{}",
-      "tooltip": false
+      "tooltip": false,
+      "restart-interval": 1
   }
   },
   {
